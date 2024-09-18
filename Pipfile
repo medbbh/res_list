@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+djoser = "*"
+psycopg2-binary = "*"
+django-cors-headers = "*"
+django-geoposition = "*"
+postgis = "*"
+djangorestframework-gis = "*"
+pillow = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
