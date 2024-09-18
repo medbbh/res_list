@@ -7,7 +7,7 @@ class Species(models.Model):
     scientific_name = models.CharField(max_length=255)
     status = models.CharField(max_length=100)  # E.g., 'Endangered', 'Vulnerable'
     habitat = models.TextField()
-    photo = models.ImageField(upload_to='species_photos/')
+    photo = models.ImageField(upload_to='species_photos/',max_length=200)
     last_sighted = models.DateTimeField(auto_now=True)
     location = models.PointField(geography=True)  # PostGIS PointField for geographic data
 

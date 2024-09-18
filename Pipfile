@@ -13,6 +13,7 @@ django-geoposition = "*"
 postgis = "*"
 djangorestframework-gis = "*"
 pillow = "*"
+drf-yasg = "*"
 
 [dev-packages]
 

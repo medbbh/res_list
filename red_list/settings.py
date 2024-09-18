@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from datetime import timedelta
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework_gis',  # For geographic data
     'djoser',  # For user authentication
     'corsheaders',
+    'drf_yasg',
     'redlistapp',
     'django.contrib.gis',  # PostGIS
 
@@ -163,3 +165,11 @@ SIMPLE_JWT = {
 GDAL_LIBRARY_PATH = r'C:/Program Files/GDAL/bin/gdal.dll'
 GEOS_LIBRARY_PATH = r'C:/Program Files/GDAL/bin/geos_c.dll'  # Adjust the path to your GEOS installation
 
+
+DJOSER = {
+    'LOGIN_FIELD': 'username',
+}
+
+# Media files configuration
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
